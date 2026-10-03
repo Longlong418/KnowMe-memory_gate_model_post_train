@@ -1,0 +1,188 @@
+{
+  "rows": 284,
+  "confusion": {
+    "tp": 120,
+    "tn": 34,
+    "fp": 108,
+    "fn": 22
+  },
+  "classification": {
+    "accuracy": 0.542254,
+    "precision": 0.526316,
+    "positive_recall": 0.84507,
+    "negative_specificity": 0.239437,
+    "unnecessary_retrieval_rate": 0.760563,
+    "f1_positive": 0.648649,
+    "f1_negative": 0.343434,
+    "macro_f1": 0.496042
+  },
+  "output": {
+    "json_valid_rate": 1.0,
+    "format_valid_rate": 0.81338
+  },
+  "evidence_only": {
+    "positive_total": 142,
+    "hits": 65,
+    "hit_rate": 0.457746
+  },
+  "end_to_end": {
+    "positive_total": 142,
+    "successful_positives": 65,
+    "memory_recall": 0.457746,
+    "query_candidates": 92,
+    "query_hits": 65,
+    "conditional_query_hit": 0.706522
+  },
+  "split": "/root/knowme-memory_gate_post_train/data/train_split/gate_test.jsonl",
+  "predictions": "/root/knowme-memory_gate_post_train/eval/results/baselines_qwen3_1.7b_test/predictions.jsonl",
+  "slices": {
+    "language": {
+      "en": {
+        "rows": 146,
+        "confusion": {
+          "tp": 62,
+          "tn": 21,
+          "fp": 52,
+          "fn": 11
+        },
+        "classification": {
+          "accuracy": 0.568493,
+          "precision": 0.54386,
+          "positive_recall": 0.849315,
+          "negative_specificity": 0.287671,
+          "unnecessary_retrieval_rate": 0.712329,
+          "f1_positive": 0.663102,
+          "f1_negative": 0.4,
+          "macro_f1": 0.531551
+        },
+        "output": {
+          "json_valid_rate": 1.0,
+          "format_valid_rate": 0.80137
+        },
+        "evidence_only": {
+          "positive_total": 73,
+          "hits": 20,
+          "hit_rate": 0.273973
+        },
+        "end_to_end": {
+          "positive_total": 73,
+          "successful_positives": 20,
+          "memory_recall": 0.273973,
+          "query_candidates": 46,
+          "query_hits": 20,
+          "conditional_query_hit": 0.434783
+        }
+      },
+      "zh": {
+        "rows": 138,
+        "confusion": {
+          "tp": 58,
+          "tn": 13,
+          "fp": 56,
+          "fn": 11
+        },
+        "classification": {
+          "accuracy": 0.514493,
+          "precision": 0.508772,
+          "positive_recall": 0.84058,
+          "negative_specificity": 0.188406,
+          "unnecessary_retrieval_rate": 0.811594,
+          "f1_positive": 0.63388,
+          "f1_negative": 0.27957,
+          "macro_f1": 0.456725
+        },
+        "output": {
+          "json_valid_rate": 1.0,
+          "format_valid_rate": 0.826087
+        },
+        "evidence_only": {
+          "positive_total": 69,
+          "hits": 45,
+          "hit_rate": 0.652174
+        },
+        "end_to_end": {
+          "positive_total": 69,
+          "successful_positives": 45,
+          "memory_recall": 0.652174,
+          "query_candidates": 46,
+          "query_hits": 45,
+          "conditional_query_hit": 0.978261
+        }
+      }
+    },
+    "source": {
+      "PersonaMem-v2": {
+        "rows": 64,
+        "confusion": {
+          "tp": 25,
+          "tn": 12,
+          "fp": 20,
+          "fn": 7
+        },
+        "classification": {
+          "accuracy": 0.578125,
+          "precision": 0.555556,
+          "positive_recall": 0.78125,
+          "negative_specificity": 0.375,
+          "unnecessary_retrieval_rate": 0.625,
+          "f1_positive": 0.649351,
+          "f1_negative": 0.470588,
+          "macro_f1": 0.55997
+        },
+        "output": {
+          "json_valid_rate": 1.0,
+          "format_valid_rate": 0.84375
+        },
+        "evidence_only": {
+          "positive_total": 32,
+          "hits": 2,
+          "hit_rate": 0.0625
+        },
+        "end_to_end": {
+          "positive_total": 32,
+          "successful_positives": 2,
+          "memory_recall": 0.0625,
+          "query_candidates": 21,
+          "query_hits": 2,
+          "conditional_query_hit": 0.095238
+        }
+      },
+      "longmemeval-cleaned": {
+        "rows": 220,
+        "confusion": {
+          "tp": 95,
+          "tn": 22,
+          "fp": 88,
+          "fn": 15
+        },
+        "classification": {
+          "accuracy": 0.531818,
+          "precision": 0.519126,
+          "positive_recall": 0.863636,
+          "negative_specificity": 0.2,
+          "unnecessary_retrieval_rate": 0.8,
+          "f1_positive": 0.648464,
+          "f1_negative": 0.29932,
+          "macro_f1": 0.473892
+        },
+        "output": {
+          "json_valid_rate": 1.0,
+          "format_valid_rate": 0.804545
+        },
+        "evidence_only": {
+          "positive_total": 110,
+          "hits": 63,
+          "hit_rate": 0.572727
+        },
+        "end_to_end": {
+          "positive_total": 110,
+          "successful_positives": 63,
+          "memory_recall": 0.572727,
+          "query_candidates": 71,
+          "query_hits": 63,
+          "conditional_query_hit": 0.887324
+        }
+      }
+    }
+  }
+}

@@ -121,7 +121,7 @@ retrieve=false   retrieve=true
 ├── docs/               # 详细文档
 ├── eval/               # 评测实现与历史结果
 │   ├── run_gate_eval.py             # 全部指标的实现
-│   └── results/                     # 每个 run 的 metrics.json / predictions.jsonl
+│   └── results/                     # 每个 run 的 metrics.json（predictions 不入库）
 ├── scripts/            # 训练、评测、日志脚本
 ├── src/
 │   ├── dataset/        # 数据构造工具链
@@ -264,9 +264,9 @@ GRPO 的奖励不只看最终文本，而是直接结合真实检索行为，包
 - 目标记忆的排序质量
 - 是否产生不必要检索
 
-完整奖励设计见：
 
-训练参数与 batch 约束见：[docs/reward.md](docs/reward.md)
+
+完整奖励设计见：[docs/reward.md](docs/reward.md)
 
 训练参数与 batch 约束见：[docs/training.md](docs/training.md)
 

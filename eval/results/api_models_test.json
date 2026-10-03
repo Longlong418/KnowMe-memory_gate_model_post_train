@@ -1,0 +1,46 @@
+{
+  "endpoint": "https://opencode.ai/zen/go/v1/chat/completions",
+  "split": "test",
+  "rows": 284,
+  "temperature": 0.0,
+  "max_tokens": 128,
+  "thinking": "off",
+  "primary_scope": "hard_haystack",
+  "haystack": "/home/longlong/knowme-memory_gate_post_train/data/grpo_hard/gate_grpo_test.jsonl",
+  "models": {
+    "mimo-v2.6-flash": {
+      "predictions": 284,
+      "failures": [],
+      "tokens": {
+        "prompt_tokens": 97163,
+        "completion_tokens": 7447,
+        "total_tokens": 104610
+      },
+      "result_dir": "/home/longlong/knowme-memory_gate_post_train/eval/results/api_mimo-v2.6-flash_test",
+      "finish_reasons": {
+        "stop": 284
+      },
+      "metrics": {
+        "hard_haystack": "/home/longlong/knowme-memory_gate_post_train/eval/results/api_mimo-v2.6-flash_test/metrics.hard_haystack.json",
+        "full_memory": "/home/longlong/knowme-memory_gate_post_train/eval/results/api_mimo-v2.6-flash_test/metrics.full_memory.json"
+      }
+    },
+    "deepseek-v4.1-flash": {
+      "predictions": 284,
+      "failures": [],
+      "tokens": {
+        "prompt_tokens": 95900,
+        "completion_tokens": 7610,
+        "total_tokens": 103510
+      },
+      "result_dir": "/home/longlong/knowme-memory_gate_post_train/eval/results/api_deepseek-v4.1-flash_test",
+      "finish_reasons": {
+        "stop": 284
+      },
+      "metrics": {
+        "hard_haystack": "/home/longlong/knowme-memory_gate_post_train/eval/results/api_deepseek-v4.1-flash_test/metrics.hard_haystack.json",
+        "full_memory": "/home/longlong/knowme-memory_gate_post_train/eval/results/api_deepseek-v4.1-flash_test/metrics.full_memory.json"
+      }
+    }
+  }
+}

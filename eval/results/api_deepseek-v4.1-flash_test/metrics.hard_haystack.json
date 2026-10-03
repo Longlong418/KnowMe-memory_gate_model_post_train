@@ -1,0 +1,439 @@
+{
+  "rows": 284,
+  "retrieval_scope": "hard_haystack",
+  "confusion": {
+    "tp": 109,
+    "tn": 111,
+    "fp": 31,
+    "fn": 33
+  },
+  "classification": {
+    "accuracy": 0.774648,
+    "precision": 0.778571,
+    "positive_recall": 0.767606,
+    "negative_specificity": 0.78169,
+    "unnecessary_retrieval_rate": 0.21831,
+    "f1_positive": 0.77305,
+    "f1_negative": 0.776224,
+    "macro_f1": 0.774637
+  },
+  "output": {
+    "json_valid_rate": 1.0,
+    "format_valid_rate": 0.982394
+  },
+  "evidence_only": {
+    "positive_total": 142,
+    "hits": 95,
+    "hit_rate": 0.669014,
+    "hit_at_1": 0.485915,
+    "hit_at_3": 0.669014,
+    "hit_at_5": 0.669014,
+    "mrr": 0.566901,
+    "conditional_mrr": 0.759434
+  },
+  "retrieval": {
+    "unresolved_evidence_rows": 0,
+    "fact": {
+      "rank_scope": "branch_internal",
+      "positive_total": 32,
+      "query_candidates": 4,
+      "hits": 1,
+      "hit_rate": 0.03125,
+      "conditional_hit_rate": 0.25,
+      "mrr": 0.03125,
+      "conditional_mrr": 0.25,
+      "hit_at_1": 0.03125,
+      "hit_at_2": 0.03125,
+      "hit_at_3": 0.03125,
+      "hit_at_4": 0.03125
+    },
+    "episode": {
+      "rank_scope": "branch_internal",
+      "positive_total": 110,
+      "query_candidates": 102,
+      "hits": 94,
+      "hit_rate": 0.854545,
+      "conditional_hit_rate": 0.921569,
+      "mrr": 0.722727,
+      "conditional_mrr": 0.779412,
+      "hit_at_1": 0.618182,
+      "hit_at_2": 0.772727,
+      "hit_at_3": 0.854545
+    },
+    "branch": {
+      "rank_scope": "branch_internal",
+      "positive_total": 142,
+      "query_candidates": 106,
+      "hits": 95,
+      "hit_rate": 0.669014,
+      "conditional_hit_rate": 0.896226,
+      "mrr": 0.566901,
+      "conditional_mrr": 0.759434,
+      "hit_at_1": 0.485915,
+      "hit_at_2": 0.605634,
+      "hit_at_3": 0.669014,
+      "hit_at_4": 0.669014
+    }
+  },
+  "end_to_end": {
+    "positive_total": 142,
+    "successful_positives": 95,
+    "memory_recall": 0.669014,
+    "query_candidates": 106,
+    "query_hits": 95,
+    "conditional_query_hit": 0.896226
+  },
+  "split": "/home/longlong/knowme-memory_gate_post_train/data/train_split/gate_test.jsonl",
+  "predictions": "/home/longlong/knowme-memory_gate_post_train/eval/results/api_deepseek-v4.1-flash_test/predictions.jsonl",
+  "haystack": "/home/longlong/knowme-memory_gate_post_train/data/grpo_hard/gate_grpo_test.jsonl",
+  "slices": {
+    "language": {
+      "en": {
+        "rows": 146,
+        "retrieval_scope": "hard_haystack",
+        "confusion": {
+          "tp": 45,
+          "tn": 58,
+          "fp": 15,
+          "fn": 28
+        },
+        "classification": {
+          "accuracy": 0.705479,
+          "precision": 0.75,
+          "positive_recall": 0.616438,
+          "negative_specificity": 0.794521,
+          "unnecessary_retrieval_rate": 0.205479,
+          "f1_positive": 0.676692,
+          "f1_negative": 0.72956,
+          "macro_f1": 0.703126
+        },
+        "output": {
+          "json_valid_rate": 1.0,
+          "format_valid_rate": 0.979452
+        },
+        "evidence_only": {
+          "positive_total": 73,
+          "hits": 37,
+          "hit_rate": 0.506849,
+          "hit_at_1": 0.410959,
+          "hit_at_3": 0.506849,
+          "hit_at_5": 0.506849,
+          "mrr": 0.454338,
+          "conditional_mrr": 0.753788
+        },
+        "retrieval": {
+          "unresolved_evidence_rows": 0,
+          "fact": {
+            "rank_scope": "branch_internal",
+            "positive_total": 32,
+            "query_candidates": 4,
+            "hits": 1,
+            "hit_rate": 0.03125,
+            "conditional_hit_rate": 0.25,
+            "mrr": 0.03125,
+            "conditional_mrr": 0.25,
+            "hit_at_1": 0.03125,
+            "hit_at_2": 0.03125,
+            "hit_at_3": 0.03125,
+            "hit_at_4": 0.03125
+          },
+          "episode": {
+            "rank_scope": "branch_internal",
+            "positive_total": 41,
+            "query_candidates": 40,
+            "hits": 36,
+            "hit_rate": 0.878049,
+            "conditional_hit_rate": 0.9,
+            "mrr": 0.784553,
+            "conditional_mrr": 0.804167,
+            "hit_at_1": 0.707317,
+            "hit_at_2": 0.829268,
+            "hit_at_3": 0.878049
+          },
+          "branch": {
+            "rank_scope": "branch_internal",
+            "positive_total": 73,
+            "query_candidates": 44,
+            "hits": 37,
+            "hit_rate": 0.506849,
+            "conditional_hit_rate": 0.840909,
+            "mrr": 0.454338,
+            "conditional_mrr": 0.753788,
+            "hit_at_1": 0.410959,
+            "hit_at_2": 0.479452,
+            "hit_at_3": 0.506849,
+            "hit_at_4": 0.506849
+          }
+        },
+        "end_to_end": {
+          "positive_total": 73,
+          "successful_positives": 37,
+          "memory_recall": 0.506849,
+          "query_candidates": 44,
+          "query_hits": 37,
+          "conditional_query_hit": 0.840909
+        }
+      },
+      "zh": {
+        "rows": 138,
+        "retrieval_scope": "hard_haystack",
+        "confusion": {
+          "tp": 64,
+          "tn": 53,
+          "fp": 16,
+          "fn": 5
+        },
+        "classification": {
+          "accuracy": 0.847826,
+          "precision": 0.8,
+          "positive_recall": 0.927536,
+          "negative_specificity": 0.768116,
+          "unnecessary_retrieval_rate": 0.231884,
+          "f1_positive": 0.85906,
+          "f1_negative": 0.834646,
+          "macro_f1": 0.846853
+        },
+        "output": {
+          "json_valid_rate": 1.0,
+          "format_valid_rate": 0.985507
+        },
+        "evidence_only": {
+          "positive_total": 69,
+          "hits": 58,
+          "hit_rate": 0.84058,
+          "hit_at_1": 0.565217,
+          "hit_at_3": 0.84058,
+          "hit_at_5": 0.84058,
+          "mrr": 0.68599,
+          "conditional_mrr": 0.763441
+        },
+        "retrieval": {
+          "unresolved_evidence_rows": 0,
+          "fact": {
+            "rank_scope": "branch_internal",
+            "positive_total": 0,
+            "query_candidates": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "conditional_hit_rate": null,
+            "mrr": null,
+            "conditional_mrr": null,
+            "hit_at_1": null,
+            "hit_at_2": null,
+            "hit_at_3": null,
+            "hit_at_4": null
+          },
+          "episode": {
+            "rank_scope": "branch_internal",
+            "positive_total": 69,
+            "query_candidates": 62,
+            "hits": 58,
+            "hit_rate": 0.84058,
+            "conditional_hit_rate": 0.935484,
+            "mrr": 0.68599,
+            "conditional_mrr": 0.763441,
+            "hit_at_1": 0.565217,
+            "hit_at_2": 0.73913,
+            "hit_at_3": 0.84058
+          },
+          "branch": {
+            "rank_scope": "branch_internal",
+            "positive_total": 69,
+            "query_candidates": 62,
+            "hits": 58,
+            "hit_rate": 0.84058,
+            "conditional_hit_rate": 0.935484,
+            "mrr": 0.68599,
+            "conditional_mrr": 0.763441,
+            "hit_at_1": 0.565217,
+            "hit_at_2": 0.73913,
+            "hit_at_3": 0.84058,
+            "hit_at_4": 0.84058
+          }
+        },
+        "end_to_end": {
+          "positive_total": 69,
+          "successful_positives": 58,
+          "memory_recall": 0.84058,
+          "query_candidates": 62,
+          "query_hits": 58,
+          "conditional_query_hit": 0.935484
+        }
+      }
+    },
+    "source": {
+      "PersonaMem-v2": {
+        "rows": 64,
+        "retrieval_scope": "hard_haystack",
+        "confusion": {
+          "tp": 4,
+          "tn": 23,
+          "fp": 9,
+          "fn": 28
+        },
+        "classification": {
+          "accuracy": 0.421875,
+          "precision": 0.307692,
+          "positive_recall": 0.125,
+          "negative_specificity": 0.71875,
+          "unnecessary_retrieval_rate": 0.28125,
+          "f1_positive": 0.177778,
+          "f1_negative": 0.554217,
+          "macro_f1": 0.365997
+        },
+        "output": {
+          "json_valid_rate": 1.0,
+          "format_valid_rate": 1.0
+        },
+        "evidence_only": {
+          "positive_total": 32,
+          "hits": 1,
+          "hit_rate": 0.03125,
+          "hit_at_1": 0.03125,
+          "hit_at_3": 0.03125,
+          "hit_at_5": 0.03125,
+          "mrr": 0.03125,
+          "conditional_mrr": 0.25
+        },
+        "retrieval": {
+          "unresolved_evidence_rows": 0,
+          "fact": {
+            "rank_scope": "branch_internal",
+            "positive_total": 32,
+            "query_candidates": 4,
+            "hits": 1,
+            "hit_rate": 0.03125,
+            "conditional_hit_rate": 0.25,
+            "mrr": 0.03125,
+            "conditional_mrr": 0.25,
+            "hit_at_1": 0.03125,
+            "hit_at_2": 0.03125,
+            "hit_at_3": 0.03125,
+            "hit_at_4": 0.03125
+          },
+          "episode": {
+            "rank_scope": "branch_internal",
+            "positive_total": 0,
+            "query_candidates": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "conditional_hit_rate": null,
+            "mrr": null,
+            "conditional_mrr": null,
+            "hit_at_1": null,
+            "hit_at_2": null,
+            "hit_at_3": null
+          },
+          "branch": {
+            "rank_scope": "branch_internal",
+            "positive_total": 32,
+            "query_candidates": 4,
+            "hits": 1,
+            "hit_rate": 0.03125,
+            "conditional_hit_rate": 0.25,
+            "mrr": 0.03125,
+            "conditional_mrr": 0.25,
+            "hit_at_1": 0.03125,
+            "hit_at_2": 0.03125,
+            "hit_at_3": 0.03125,
+            "hit_at_4": 0.03125
+          }
+        },
+        "end_to_end": {
+          "positive_total": 32,
+          "successful_positives": 1,
+          "memory_recall": 0.03125,
+          "query_candidates": 4,
+          "query_hits": 1,
+          "conditional_query_hit": 0.25
+        }
+      },
+      "longmemeval-cleaned": {
+        "rows": 220,
+        "retrieval_scope": "hard_haystack",
+        "confusion": {
+          "tp": 105,
+          "tn": 88,
+          "fp": 22,
+          "fn": 5
+        },
+        "classification": {
+          "accuracy": 0.877273,
+          "precision": 0.826772,
+          "positive_recall": 0.954545,
+          "negative_specificity": 0.8,
+          "unnecessary_retrieval_rate": 0.2,
+          "f1_positive": 0.886076,
+          "f1_negative": 0.866995,
+          "macro_f1": 0.876535
+        },
+        "output": {
+          "json_valid_rate": 1.0,
+          "format_valid_rate": 0.977273
+        },
+        "evidence_only": {
+          "positive_total": 110,
+          "hits": 94,
+          "hit_rate": 0.854545,
+          "hit_at_1": 0.618182,
+          "hit_at_3": 0.854545,
+          "hit_at_5": 0.854545,
+          "mrr": 0.722727,
+          "conditional_mrr": 0.779412
+        },
+        "retrieval": {
+          "unresolved_evidence_rows": 0,
+          "fact": {
+            "rank_scope": "branch_internal",
+            "positive_total": 0,
+            "query_candidates": 0,
+            "hits": 0,
+            "hit_rate": null,
+            "conditional_hit_rate": null,
+            "mrr": null,
+            "conditional_mrr": null,
+            "hit_at_1": null,
+            "hit_at_2": null,
+            "hit_at_3": null,
+            "hit_at_4": null
+          },
+          "episode": {
+            "rank_scope": "branch_internal",
+            "positive_total": 110,
+            "query_candidates": 102,
+            "hits": 94,
+            "hit_rate": 0.854545,
+            "conditional_hit_rate": 0.921569,
+            "mrr": 0.722727,
+            "conditional_mrr": 0.779412,
+            "hit_at_1": 0.618182,
+            "hit_at_2": 0.772727,
+            "hit_at_3": 0.854545
+          },
+          "branch": {
+            "rank_scope": "branch_internal",
+            "positive_total": 110,
+            "query_candidates": 102,
+            "hits": 94,
+            "hit_rate": 0.854545,
+            "conditional_hit_rate": 0.921569,
+            "mrr": 0.722727,
+            "conditional_mrr": 0.779412,
+            "hit_at_1": 0.618182,
+            "hit_at_2": 0.772727,
+            "hit_at_3": 0.854545,
+            "hit_at_4": 0.854545
+          }
+        },
+        "end_to_end": {
+          "positive_total": 110,
+          "successful_positives": 94,
+          "memory_recall": 0.854545,
+          "query_candidates": 102,
+          "query_hits": 94,
+          "conditional_query_hit": 0.921569
+        }
+      }
+    }
+  }
+}
