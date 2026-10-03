@@ -121,7 +121,7 @@ retrieve=false   retrieve=true
 ├── docs/               # 详细文档
 ├── eval/               # 评测实现与历史结果
 │   ├── run_gate_eval.py             # 全部指标的实现
-│   └── results/                     # 每个 run 的 metrics.json（predictions 不入库）
+│   └── results/                     # 每个 run 的 metrics.json 与 predictions.jsonl
 ├── scripts/            # 训练、评测、日志脚本
 ├── src/
 │   ├── dataset/        # 数据构造工具链
