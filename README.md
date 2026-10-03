@@ -329,9 +329,24 @@ uv run python scripts/eval_api_model.py \
 
 详细请看：[docs/knowme_integration.md](docs/knowme_integration.md)
 
-# 部署到本地
 
-coming soon
+# 已训练模型的获取
+
+
+## 方式1:合并 LoRA Adapter 与 Base Model
+如果你已经完成 SFT / GRPO 训练，可以使用 `ms-swift` 将最终 LoRA Adapter 与 Base Model 合并为完整模型：
+```bash
+swift export \
+  --adapters /your-checkpoint-path \
+  --merge_lora true \
+  --output_dir /deploy/knowme-memory-gate-model-grpo
+```
+## 方式2:直接下载已合并模型
+本项目已将训练后的完整模型上传至：
+- Hugging Face
+- ModelScope
+可直接下载模型，无需手动执行 LoRA Merge。
+
 
 # 数据来源与数据构造
 
