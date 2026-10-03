@@ -1,0 +1,59 @@
+{
+  "source_file": "gate_final_2855.sft.jsonl",
+  "seed": 20261001,
+  "policy": {
+    "logical_groups": {
+      "locomo": "source.sample_id (conversation)",
+      "longmemeval-cleaned": "source.question_id",
+      "PersonaMem-v2": "source.persona_id",
+      "RHELM": "source.source_file"
+    },
+    "exact_input_deduplication": "Any logical groups sharing an exactly identical model input are merged before splitting.",
+    "RHELM": "Train-only because the current 248 rows come from one source/persona file.",
+    "selection": "Group-aware, deterministic; dev/test balanced for label and language, and approximately stratified for question/preference types."
+  },
+  "counts": {
+    "train": {
+      "split": "train",
+      "rows": 2287,
+      "retrieve_true": 1145,
+      "retrieve_false": 1142,
+      "zh": 1110,
+      "en": 1177,
+      "LoCoMo": 980,
+      "LongMemEval": 556,
+      "PersonaMem": 503,
+      "RHELM": 248
+    },
+    "dev": {
+      "split": "dev",
+      "rows": 284,
+      "retrieve_true": 142,
+      "retrieve_false": 142,
+      "zh": 138,
+      "en": 146,
+      "LoCoMo": 0,
+      "LongMemEval": 220,
+      "PersonaMem": 64,
+      "RHELM": 0
+    },
+    "test": {
+      "split": "test",
+      "rows": 284,
+      "retrieve_true": 142,
+      "retrieve_false": 142,
+      "zh": 138,
+      "en": 146,
+      "LoCoMo": 0,
+      "LongMemEval": 220,
+      "PersonaMem": 64,
+      "RHELM": 0
+    }
+  },
+  "checks": {
+    "total_rows": 2855,
+    "logical_group_cross_split_overlap": 0,
+    "exact_input_cross_split_overlap": 0,
+    "resolved_paired_positive_cross_split_violations": 0
+  }
+}

@@ -1,0 +1,48 @@
+[project]
+name = "knowme-memory-gate-post-train"
+version = "0.1.0"
+description = "Data construction and post-training experiments for the KnowMe memory retrieval gate."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+# The data-construction pipeline under src/dataset/ is standard-library only --
+# it talks to OpenRouter over http.client, not through an SDK. Nothing to install;
+# the extra exists so `.[train,data,dev]` in the README stays honest about which
+# parts of the repo are being set up.
+data = []
+train = [
+    # Pinned exactly: the reward plugin (scripts/grpo_gate_reward.py) is written
+    # against this release's ORM contract, and so is scripts/gate_epoch_callback.py.
+    # This one line also brings in accelerate, datasets (<4.8.5), modelscope,
+    # peft (<0.21), transformers (<5.17) and trl, each with ms-swift's own bounds.
+    # Pin them here too and the two sets drift apart.
+    "ms-swift==4.5.3",
+    "torch>=2.3",
+    # ms-swift 4.5.3 imports msgspec at module scope -- swift/rlhf_trainers/utils.py
+    # has a top-level `from msgspec import field` -- but does not declare it: none
+    # of its 89 Requires-Dist entries mention msgspec. An environment built from
+    # its metadata alone therefore has no msgspec, and `swift rlhf` dies with
+    # ModuleNotFoundError as soon as the trainer is imported (`swift rlhf --help`
+    # still works, because that path does not import it).
+    "msgspec>=0.18",
+    # ms-swift declares `swanlab` with no version bound, so an unpinned install
+    # picks up >=0.8, where swanlab.get_run() raises instead of returning None.
+    # transformers' SwanLabCallback does `if swanlab.get_run() is None: init()`
+    # and TrainerCallbackHandler.call_event does not catch, so training dies at
+    # on_train_begin with "No active Run". 0.7.x is the last line that returns
+    # None, and it still exports swanlab.echarts (used for completion tables).
+    "swanlab<0.8",
+    # No bitsandbytes: this is LoRA, not QLoRA. ms-swift only reaches for it on
+    # the quantised paths, and it is not importable in the recorded environment.
+]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
