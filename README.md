@@ -343,8 +343,9 @@ swift export \
 ```
 ## 方式2:直接下载已合并模型
 本项目已将训练后的完整模型上传至：
-- Hugging Face
-- ModelScope
+- Hugging Face:[Longlong418/knowme-memory-gate-model-grpo](https://huggingface.co/Longlong418/knowme-memory-gate-model-grpo)
+- ModelScope:[Longlong418/knowme-memory-gate-model-grpo](https://www.modelscope.cn/models/Longlong418/knowme-memory-gate-model-grpo)
+
 可直接下载模型，无需手动执行 LoRA Merge。
 
 
